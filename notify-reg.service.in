@@ -1,12 +1,11 @@
 [Unit]
-Description=Qutebrowser Floccus Sync Daemon
-After=network-online.target
+Description=Notification Registry Service
+After=dbus-session.service
 
 [Service]
 Type=simple
 ExecStart={{BIN_PATH}} --path %h/notify-reg.txt
-Restart=on-failure
-RestartSec=60s
+Restart=always
 
 [Install]
 WantedBy=default.target
