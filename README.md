@@ -30,7 +30,7 @@ systemctl --user enable --now notify-reg
 ### 方式二：下载二进制文件 (手动部署)
 
 1.  从 [Releases](https://github.com/cap153/notify-reg/releases) 下载二进制文件并放入 PATH（如 `~/.local/bin/`）。
-2.  **手动配置 [Systemd](#开机自启动（systemd）)**
+2.  **手动配置** [Systemd](#systemd 开机自启动)
 
 ## 使用方法
 
@@ -63,7 +63,7 @@ notify-reg -p /tmp/notifications.txt` --cleanup-interval 3600
 nohup notify-reg --path ~/notifications.txt --cleanup-interval 86400 &
 ```
 
-### 开机自启动（systemd）
+### systemd 开机自启动
 
 创建服务文件 `~/.config/systemd/user/notify-reg.service`：
 
