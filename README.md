@@ -16,20 +16,20 @@
 如果您安装了 Rust 工具链，Makefile 会自动完成编译、安装以及 **Systemd 服务的生成与注册**。
 
 ```bash
-git clone https://github.com/cap153/qb-floccus.git
-cd qb-floccus
+git clone https://github.com/cap153/notify-reg.git
+cd notify-reg
 
 # 编译并安装到 ~/.local/bin，同时自动配置 Systemd
 make install
 
 systemctl --user daemon-reload
 # 启动服务并配置开机自启动
-systemctl --user enable --now qb-floccus
+systemctl --user enable --now notify-reg
 ```
 
 ### 方式二：下载二进制文件 (手动部署)
 
-1.  从 [Releases](https://github.com/cap153/qb-floccus/releases) 下载二进制文件并放入 PATH（如 `~/.local/bin/`）。
+1.  从 [Releases](https://github.com/cap153/notify-reg/releases) 下载二进制文件并放入 PATH（如 `~/.local/bin/`）。
 2.  **手动配置 [Systemd](开机自启动（systemd）)**
 
 ## 使用方法
